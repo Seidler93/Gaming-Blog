@@ -4,10 +4,10 @@ import { Toaster } from "react-hot-toast";
 
 export default function App({ Component, pageProps }) {
   return (
-    <>
+    <UserContext.Provider value={{ user: {}, username: 'jeff' }}>
       <Navbar/>
       <Component {...pageProps} />;
       <Toaster/>
-    </>
+    </UserContext.Provider>
   )
 }
